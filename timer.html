@@ -16,7 +16,7 @@
         }
 
         .layer {
-            width: 100%;
+            width: 90%;
             max-width: 90%;
             margin: 0 auto;
             padding: 20px;
@@ -27,16 +27,28 @@
 
         @media (min-width: 100px) {
             .layer {
-                max-width: 900px;
+                width: 90%;
             }
         }
 
         h1 {
-            font-size: 26 px; 
+            font-size: 3vw; 
             font-weight: 400;
             text-align: center;
             color: #333;
             margin-bottom: 45px;
+        }
+
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 26px;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            h1 {
+                font-size: 36px;
+            }
         }
 
         #config-timer form p {
@@ -58,7 +70,7 @@
 
         button {
             display: inline-block;
-            width: 15%;
+            width: 28%;
             padding: 12px;
             background-color: #3f51b5;
             color: #fff;
@@ -138,23 +150,23 @@
                 <label>
                     <span class="bold">Time limit: </span>
                     <input type="number" id="customTimeLimitMinute" min="0" max="99" value="00">
-                    <span> minute(s)</span>
+                    <span> min</span>
                     <input type="number" id="customTimeLimitSecond" min="0" max="60" value="00">
-                    <span> second(s)</span>
+                    <span> sec</span>
                 </label><br>
                 <label>
                     <span class="bold">Green light: </span>
                     <input type="number" id="greenLightTimeMinute" min="0" max="99" value="00">
-                    <span> minute(s)</span>
+                    <span> min</span>
                     <input type="number" id="greenLightTimeSecond" min="0" max="60" value="00">
-                    <span> second(s) before the time limit.</span>
+                    <span> sec before the time limit.</span>
                 </label><br>
                 <label>
                     <span class="bold">Yellow light: </span>
                     <input type="number" id="yellowLightTimeMinute" min="0" max="99" value="00">
-                    <span> minute(s)</span>
+                    <span> min</span>
                     <input type="number" id="yellowLightTimeSecond" min="0" max="60" value="00">
-                    <span> second(s) before the time limit.</span>
+                    <span> sec before the time limit.</span>
                 </label>
             </p>
         </form>
