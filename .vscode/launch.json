@@ -6,7 +6,7 @@
             "request": "launch",
             "reAttach": true,
             "name": "Launch Firefox against localhost",
-            "url": "${workspaceFolder}/test.html",
+            "url": "${workspaceFolder}/timer.html",
             "webRoot": "${workspaceFolder}"
         }
     ]

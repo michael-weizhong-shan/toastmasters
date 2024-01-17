@@ -1,0 +1,143 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#config-timer form p {
+    margin-bottom: 20px;
+}
+
+#config-timer form select {
+    width: 80%; 
+}
+
+#timer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: clamp(4rem, 12vw, 18rem);
+    border: 5px solid #bebec2;
+    border-radius: 15%;
+    box-shadow: 
+        0px 10px 10px rgba(0, 0, 0, 0.2), 
+        0 0 0 5px #fff, 
+        0 0 0 10px #bebec2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 0 1vw;
+}
+
+input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+}
+
+button {
+    display: inline-block;
+    width: 40%;
+    padding: 12px;
+    background-color: #3f51b5;
+    color: #fff;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    font-size: 18px;
+    margin: 0 auto; 
+    margin-top: 45px; 
+}
+
+button:hover {
+    background-color: #303f9f;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#customTimeInput input {
+    width: 2ch; 
+}
+
+#customTimeInput {
+    text-align: left;
+}
+
+#pauseButton {
+    margin-right: 20px;
+}
+
+#light-settings {
+    border: 1px solid #49494944;
+    padding: 10px; 
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.layer {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px 50px;
+    height: 90vh;
+    position: absolute;
+    text-align: center;
+}
+
+
+.layer h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);; 
+    font-weight: 400;
+    text-align: center;
+    color: #333;
+    margin-bottom: 45px;
+}
+
+.layer h2, h3 {
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.layer p {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.layer a:hover {
+    text-decoration: underline;
+}
+
+.grid-container input {
+    display: inline-block;
+}
+
+.grid-container div {
+    text-align: left;
+    padding-left: 3px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.45fr 0.55fr;
+    align-items: center;
+}
+
