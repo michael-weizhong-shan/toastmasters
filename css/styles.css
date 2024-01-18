@@ -49,10 +49,10 @@ button {
     background-color: #3f51b5;
     color: #fff;
     border: none;
-    border-radius: 5%;
+    border-radius:20%;
     cursor: pointer;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-    font-size: 18px;
+    font-size: clamp(1rem, 2vw, 2rem);
     margin: 0 auto; 
     margin-top: 45px; 
 }
@@ -137,7 +137,7 @@ button:hover {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 0.45fr 0.55fr;
+    grid-template-columns: 0.42fr 0.58fr;
     align-items: center;
 }
 
