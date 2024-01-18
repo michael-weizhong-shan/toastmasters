@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="icon" sizes="16x16" type="image/ico" href="icon/16.ico">
+    <link rel="icon" sizes="32x32" type="image/ico" href="icon/32.ico">
+    <link rel="icon" sizes="50x50" type="image/ico" href="icon/50.ico">
+    <link rel="icon" sizes="58x58" type="image/ico" href="icon/58.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="icon/16.ico">
+    <title>Toastmasters Timer</title>
+</head>
+<body>
+    <div id="config-timer" class="layer">
+        <h1>Toastmasters Timer</h1>
+        <form action="#">
+            <p style="text-align: center;">
+                <label for="role" id="role-label" class="bold">Timer type: </label>
+                <select name="role" id="role">
+                    <option value="roleSpeechIntro" selected>Role/Speech introduction (2 min)</option>
+                    <option value="welcomeSpeech">Welcome speech (3 min)</option>
+                    <option value="standardSpeech">Standard speech (7 min)</option>
+                    <option value="evaluation">Speech evaluation (3 min)</option>
+                    <option value="tableTopicsEvaluation">Table topics evaluation (6 min)</option>
+                    <option value="tableTopics">Table topics (2 min)</option>
+                    <option value="roleReports">Role reports (3 min)</option>
+                    <option value="generalEvaluatorReport">General evaluator report (5 min)</option>
+                    <option value="custom">Custom</option>
+                </select>
+            </p>
+            <div id="customTimeInput" style="display: none;">
+                <label>
+                    <span class="bold">Time limit: </span>
+                    <input type="tel" value="00" id="customTimeLimitMinute" pattern="[0-9]*" inputmode="numeric" onkeypress="return isNumberKey(event)">
+                    <span> min</span>
+                    <input type="tel" value="00" id="customTimeLimitSecond" pattern="[0-9]*" inputmode="numeric" onkeypress="return isNumberKey(event)" oninput="validateInput(this)">
+                    <span> sec</span>
+                </label>
+                <div id="light-settings">
+                    <h4>Warning light settings:</h4>
+                    <p>Lights on at specified time before limit.</p>
+                    <label class="grid-container">
+                        <span class="bold">Green light: </span>
+                        <div>
+                            <input type="tel" value="00" id="greenLightTimeMinute" pattern="[0-9]*" inputmode="numeric" onkeypress="return isNumberKey(event)">
+                            <span> min</span>
+                            <input type="tel" value="00" id="greenLightTimeSecond" pattern="[0-9]*" inputmode="numeric" onkeypress="return isNumberKey(event)" oninput="validateInput(this)">
+                            <span> sec </span>
+                        </div>
+                    </label>
+                    <br>
+                    <label class="grid-container">
+                        <span class="bold">Yellow light: </span>
+                        <div>
+                            <input type="tel" value="00" id="yellowLightTimeMinute" pattern="[0-9]*" inputmode="numeric" onkeypress="return isNumberKey(event)">
+                            <span> min</span>
+                            <input type="tel" value="00" id="yellowLightTimeSecond" pattern="[0-9]*" inputmode="numeric" onkeypress="return isNumberKey(event)" oninput="validateInput(this)">
+                            <span> sec </span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </form>
+        <button id="startButton">Start</button>
+        <button id="aboutButton">About</button>
+    </div>
+    <div id="display-timer" class="layer hidden">
+        <h1>Toastmasters Timer</h1>
+
+        <div id="timer">00:00</div>
+
+        <button id="pauseButton">Pause</button>
+        <button id="resetButton">Reset</button>
+    </div>
+    <div id="about-timer" class="layer hidden">
+        <h2>About this timer</h2>
+        <p>
+            This timer was developed by <a href="https://www.linkedin.com/in/michael-w-shan/">Michael Shan</a> from the <a href="https://www.facebook.com/groups/1037911107467112/">Sunnynook Toastmasters Club</a>. 
+            It is a simple timer for Toastmasters meetings. The timer runs on both mobile devices and PC computers.
+            The current version of the timer is <span id="version">0.2</span>.
+        </p>
+        <p>
+            The timer was developed with the help of AI. It is open source and available on <a href="https://github.com/michael-weizhong-shan/toastmasters">GitHub</a>. Please feel free to share the timer with your fellow toastmasters or contribute to the project.
+        </p>
+        <p>
+            If you have any questions or suggestions, please <a href="mailto:michael.shan@gmail.com">email</a> Michael Shan.
+        </p>
+
+        <button id="backButton">Back</button>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
